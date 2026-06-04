@@ -248,7 +248,7 @@ def pointTurn(setPoint):
 
         
         # Calculate the correction termf for the motor velocities
-        turnCorrection = kP * turnError + kP * derivative            # P & D control
+        turnCorrection = kP * turnError + kD * derivative            # P & D control
 
         # Limit the PD output to remain beween -1 and 1
         # This will keep the motor velocity from exceeding its maximum set value
