@@ -311,21 +311,22 @@ def main():
 
     
     
-    driveStraight(92,0,50)  # Tune your kP value
-    wait (500,MSEC)
-    liftArm(50,60)
-    wait (500,MSEC)
-    driveStraight(30,0,-50)  # Tune your kP value
-    wait (500,MSEC)
+    #driveStraight(93,0,50)
+    liftArm(20, 35)
+    #wait(0.5,SECONDS)
+    #driveStraight(7, 0, -50)
     pointTurn(90)
-    driveStraight(5,0,50)  # Tune your kP value
-    wait (500,MSEC)
-    liftArm(50,-60)
-    #wait(4,SECONDS)
-    #driveStraight(84,0,-50)  # Tune your kP value
-
-    
-
+    #wait(0.5, SECONDS)
+    #driveStraight(70,0,50)
+    pointTurn(45)
+    #driveStraight(10, 0, 50)
+    #liftArm(20, -35)
+    #wait(0.5, SECONDS)
+    #liftArm(20, 35)
+    pointTurn(135)
+    #driveStraight(8, 0, -50)
+    pointTurn(90)
+    #driveStraight(40, 0, -50)
 # ----------------------------------------------------------------------------------------
 
 main()
