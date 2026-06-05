@@ -111,7 +111,7 @@ def driveStraight(distance, setpoint, motorVelocity):
     leftMotor.set_stopping(COAST)
     rightMotor.set_stopping(COAST)
     
-    kP = 0.35   #Constant of proportionality
+    kP = 0.43   #Constant of proportionality
                 #Used to calculate velocity correction term
                 #If too small, correction occurs too slow
                 #If too large, system will overcorrect
@@ -219,12 +219,12 @@ def pointTurn(setPoint):
 
     if (clockwise):
         # Set PD constants for turning CW
-        kP = 0.03
-        kD = 0.00
+        kP = 0.1
+        kD = 0.2
 
     else:   # P & D values if turning CCW
-        kP = 0.10
-        kD = 0.02
+        kP = 0.1
+        kD = 0.2
 
     # Define max turning velocity and previous variables
 
@@ -311,22 +311,23 @@ def main():
 
     
     
-    #driveStraight(93,0,50)
+    driveStraight(86,0,75)
     liftArm(20, 35)
-    #wait(0.5,SECONDS)
-    #driveStraight(7, 0, -50)
-    pointTurn(90)
-    #wait(0.5, SECONDS)
-    #driveStraight(70,0,50)
+    wait(0.5,SECONDS)
+    driveStraight(4, 0, -50)
+    pointTurn(86)
+    wait(0.5, SECONDS)
+    driveStraight(67,0,60)
     pointTurn(45)
-    #driveStraight(10, 0, 50)
-    #liftArm(20, -35)
-    #wait(0.5, SECONDS)
-    #liftArm(20, 35)
-    pointTurn(135)
-    #driveStraight(8, 0, -50)
-    pointTurn(90)
-    #driveStraight(40, 0, -50)
+    driveStraight(9, 0, 50)
+    liftArm(20, -35)
+    wait(0.5, SECONDS)
+    liftArm(20, 35)
+    driveStraight(1,0,-50)
+    pointTurn(137)
+    driveStraight(16, 0, -50)
+    pointTurn(92)
+    driveStraight(36, 0, -65)
 # ----------------------------------------------------------------------------------------
 
 main()
