@@ -1,8 +1,9 @@
 """
-Name:       main.py
-Coded by:   Samvarth Raj, Evangelos Parameritis
-Purpose:    Use GitHub and Inertial Sensor
-Date:       5/8/2026
+Project Name:       VEX Transport
+Team Members:       Evangelos Parameritis, Aarav Kumar, Kaleb Barbiere
+POE Section:        2
+Date:               6/8/2026
+Task Description:   Maneuvered VEX bot around a course, picking up a ball, dropping it off, and parking, all within a certain time frame
 """
 
 from vex import *
